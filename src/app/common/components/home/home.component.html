@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="profile-card text-center">
+        <img
+          [src]="'../../../../assets/profile-image.jpg' | assetUrl"
+          alt="Profile Picture"
+        />
+        <h3>{{ personalInfo.name }}</h3>
+        <p class="text-muted">{{ personalInfo.role }}</p>
+        <p>{{ personalInfo.welcomeMessage }}</p>
+        <strong>Curiosity</strong>
+        <p>{{ personalInfo.curiosities }}</p>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="info-card">
+        <table class="table">
+          <tbody>
+            <tr>
+              <th>Full Name</th>
+              <td>{{ personalInfo.name }}</td>
+            </tr>
+            <tr>
+              <th>Email</th>
+              <td>{{ personalInfo.email }}</td>
+            </tr>
+            <tr>
+              <th>Age</th>
+              <td>{{ personalInfo.age }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="info-card">
+            <h3>Angular 2+ Skills</h3>
+            <ul>
+              <li *ngFor="let skill of angularSkills">{{ skill }}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="info-card">
+            <h3>Other Skills</h3>
+            <ul>
+              <li *ngFor="let skill of otherSkills">{{ skill }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="info-card">
+        <h3>Work Experience</h3>
+        <div *ngFor="let work of workExperience">
+          <h4>{{ work.companyName }}</h4>
+          <p>
+            <strong>Position:</strong> {{ work.position }}<br />
+            <strong>Period of Work:</strong> {{ work.period }}<br />
+            <strong>Location:</strong> {{ work.location }}<br />
+            <strong>Project Overview:</strong> {{ work.overview }}<br />
+            <strong>Team Composition:</strong> {{ work.team }}<br />
+            <strong>Responsibilities:</strong> {{ work.responsibilities }}<br />
+            <strong>Achievements:</strong> {{ work.achievements }}<br />
+            <strong>Technologies Used:</strong> {{ work.technologies }}<br />
+          </p>
+          <hr />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
