@@ -11,9 +11,9 @@ export const ANGULAR_SKILLS = [
 export const OTHER_SKILLS = [
 	"Figma",
 	"Jira",
-	"Scrum",
+	"AWS",
 	"GitLab",
 	"Azure",
-	"Communication",
+	"Travis CI",
 	"English",
 ];
